@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gigs/screens/project_details.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Gigs',
-      home: MainApp(),
+      home: ProjectDetailsPage(),
     );
   }
 }
@@ -21,7 +22,8 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text(""),
+    return Container(
+      child: Text(""),
     );
   }
 }
