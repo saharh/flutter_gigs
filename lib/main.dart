@@ -28,6 +28,16 @@ class _MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 0.0),
+            child: Icon(Icons.search, size: 30,),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Icon(Icons.filter_list, size: 30,),
+          )
+        ],
         title: Text("Flutter Gigs"),
       ),
       body: Container(

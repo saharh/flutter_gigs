@@ -36,7 +36,7 @@ class ProjectAdd extends StatelessWidget {
             ),
             divider,
             MaterialButton(
-              child: Text("OK"),
+              child: Text("OK", style: TextStyle(color: Colors.white),),
               onPressed: () => Navigator.pop(context),
               shape: BeveledRectangleBorder(),
               color: Colors.blue,

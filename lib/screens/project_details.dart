@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gigs/Widgets/Contact.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProjectDetailsPage extends StatelessWidget {
@@ -28,7 +29,7 @@ class ProjectDetailsPage extends StatelessWidget {
                 child: Icon(Icons.airplay),
               ),
               title: Text(
-                'Calendar Carousel Picker',
+                'Traffic Notifier',
                 style: Theme.of(context).textTheme.body1.copyWith(color: Colors.white, fontSize: 28),
               ),
             ),
@@ -43,7 +44,7 @@ class ProjectDetailsPage extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.only(start: 8),
-                  child: Text('52'),
+                  child: Text('352'),
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.only(start: 16),
@@ -81,7 +82,7 @@ class ProjectDetailsPage extends StatelessWidget {
                   Expanded(
                     child: RaisedButton(
                       color: Theme.of(context).primaryColor,
-                      onPressed: () => {},
+                      onPressed: () => Navigator.push(context, new MaterialPageRoute(builder: (context) => Contact())),
                       child: Text(
                         'CONTACT',
                         style: TextStyle(color: Colors.white),
@@ -141,7 +142,7 @@ class DescriptionSection extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 16.0, bottom: 16),
             child: Text(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
+              'This project is intended for all those wish to know when to leave the office depending on the traffic in the route from the office to their home. We use cool APIs to monitor the traffic, and let you know at the time window of your choice when would be the best time to leave the office.',
               style: TextStyle(color: Colors.black54),
             ),
           )
@@ -226,17 +227,23 @@ class DiscussionSection extends StatelessWidget {
                           'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
                           'https://randomuser.me/api/portraits/med/women/25.jpg'),
                     ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: ListTile(
-                    leading: CircleAvatar(backgroundImage: NetworkImage('https://randomuser.me/api/portraits/med/women/33.jpg')),
-                    title: Container(
-                      decoration: ShapeDecoration(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)), color: Colors.white,),
-                      padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                    Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: ListTile(
+                          leading: CircleAvatar(backgroundImage: NetworkImage('https://randomuser.me/api/portraits/med/women/33.jpg')),
+                          title: Container(
+                            decoration: ShapeDecoration(
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                              color: Colors.white,
+                            ),
+                            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
 //                      color: Colors.white,
-                      child: Text('Add a comment', style: TextStyle(color: Colors.grey),),
-                    ),
-                  )),
+                            child: Text(
+                              'Add a comment',
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                          ),
+                        )),
                   ],
                 ),
               ))
