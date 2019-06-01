@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gigs/Models/Model.dart';
+import 'package:flutter_gigs/Screens/ProjectAdd.dart';
+import 'package:flutter_gigs/Screens/ProjectList.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,6 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Gigs',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
       home: MainApp(),
     );
   }
@@ -21,7 +26,18 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text(""),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Flutter Gigs"),
+      ),
+      body: Container(
+        child: Projects(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ProjectAdd())),
+        shape: CircleBorder(),
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
