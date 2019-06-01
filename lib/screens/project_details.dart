@@ -230,7 +230,12 @@ class DiscussionSection extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 8.0),
                   child: ListTile(
                     leading: CircleAvatar(backgroundImage: NetworkImage('https://randomuser.me/api/portraits/med/women/33.jpg')),
-                    
+                    title: Container(
+                      decoration: ShapeDecoration(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)), color: Colors.white,),
+                      padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+//                      color: Colors.white,
+                      child: Text('Add a comment', style: TextStyle(color: Colors.grey),),
+                    ),
                   )),
                   ],
                 ),
